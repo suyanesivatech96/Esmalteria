@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Agendamento</title>
+  <link rel="stylesheet" href="inicio.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="title">
+    <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="ícone calendário" class="icon">
+    <h1>Sistema de Agendamento</h1>
+    <p>Gerencie seus compromissos de forma profissional</p>
+  </div>
+
+  <main>
+    <div class="form-container">
+      <h2>Bem-vindo</h2>
+      <p>Entre na sua conta ou crie uma nova</p>
+
+      <div class="caixa-com-link">
+        <a href="../usuario/usuario.html" class="btn-primario">Cadastrar uma nova conta</a>
+
+      </div>
+
+      <form action="login.php" method="POST">
+  <label for="email">Email</label>
+  <div class="input-box">
+    <span class="icon">✉︎</span>
+    <input id="email" name="email" type="email" required />
+  </div>
+
+  <label for="senha">Senha</label>
+  <div class="input-box">
+    <span class="icon">🔒︎</span>
+    <input id="senha" name="senha" type="password" required />
+  </div>
+
+  <button type="submit" class="btn-login">Entrar</button>
+</form>
+
+    </div>
+  </main>
+</body>
+</html>
+
+
+        
+        

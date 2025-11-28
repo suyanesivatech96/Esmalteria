@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.caixa-agendamento {
+    background: #fff;
+    width: 420px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    animation: aparecer 0.4s ease;
+}
+
+
+@keyframes aparecer {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.caixa-agendamento h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 22px;
+    color: #333;
+}
+
+.caixa-agendamento p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-weight: 500;
+    display: block;
+    margin-top: 12px;
+    color: #333;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+form input:focus, form select:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 4px rgba(76, 175, 80, 0.4);
+}
+
+.linha {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.cancelar {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.cancelar:hover {
+    background-color: beige;
+}
+
+.criar {
+    background-color: pink;
+    color: #fff;
+}
+
+.criar:hover {
+    background-color: pink;
+}
+
+
+@media (max-width: 480px) {
+    .caixa-agendamento {
+        width: 90%;
+        padding: 20px;
+    }
+    .linha {
+        flex-direction: column;
+    }
+    .botoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

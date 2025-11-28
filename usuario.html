@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuário</title>
+  <link rel="stylesheet" href="usuario.css">
+</head>
+<body>
+  <div class="title">
+    <h1>Criar Cadastro</h1>
+    <p>Preencha os dados para criar um novo Cadastro</p>
+  </div>
+
+  <main>
+    <div class="form-container">
+      
+      <form action="cadastrar_usuario.php" method="POST">
+
+        <label for="Email">Email</label>
+        <div class="input-box">
+          <input type="text" id="Email">
+        </div>
+
+        <label for="Nome">Nome</label>
+        <div class="input-box">
+          <input type="text" id="Nome">
+        </div>
+
+        <label for="data">Data de Nascimento</label>
+        <div class="input-box">
+          <input type="date" id="data" required>
+        </div>
+        
+        <label for="Contato">Contato</label>
+        <div class="input-box">
+          <input type="text" id="Contato">
+        </div>
+
+        <div class="linha-dupla">
+          <div class="metade">
+            <label for="status">Status</label>
+            <div class="input-box">
+              <select id="Status">
+                <option>Recepção</option>
+                <option>Adm</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="metade">
+            <label for="obs">Observações</label>
+            <div class="input-box">
+              <input type="text" id="obs">
+            </div>
+          </div>
+        </div>
+
+        <div class="botoes">
+          <button type="button" class="btn-secundario" onclick="window.location.href='../Inicio/inicio.html'">Cancelar</button>
+          <button type="button" class="btn-secundario" onclick="window.location.href='../inicio/inicio.html'">Criar Cadastro</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

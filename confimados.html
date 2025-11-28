@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmados</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <div class="title">
+    <h1>Agendamentos Confirmados</h1>
+    <button class="btn-secundario" onclick="window.location.href='dashboard.html'">Voltar</button>
+  </div>
+
+  <main>
+    <div class="agendamentos">
+      <h3>Clientes Confirmados</h3>
+
+      <div id="lista-confirmados">
+        
+      </div>
+    </div>
+  </main>
+
+  <script>
+    
+    const confirmados = JSON.parse(localStorage.getItem("confirmados")) || [];
+
+    const caixa = document.getElementById("lista-confirmados");
+
+    confirmados.forEach(item => {
+      caixa.innerHTML += `
+        <div class='agendamento-item'>
+          <h4>${item.titulo}</h4>
+          <p>${item.cliente}<br>${item.data}<br>${item.horario}</p>
+        </div>
+      `;
+    });
+  </script>
+
+</body>
+</html>

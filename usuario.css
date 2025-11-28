@@ -1,0 +1,138 @@
+body {
+  background-color: #fff6e9;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  margin-top: 15px;
+  color: #5b2c24;
+}
+
+.title h1 {
+  font-size: 1.8em;
+  margin: 5px 0;
+}
+
+.title p {
+  font-size: 1.0em;
+  opacity: 0.8;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  max-width: 400px;
+  margin-top: 3px;
+}
+
+.form-container {
+  background-color: #fff;
+  border: 2px solid #deb887;
+  border-radius: 15px;
+  padding: 30px 40px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  text-align: left;
+  color: #5b2c24;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  background-color: #fff6e9;
+  border: 1px solid #d6b48c;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box select {
+  border: none;
+  background: transparent;
+  flex: 1;
+  font-size: 15px;
+  outline: none;
+  color: #333;
+}
+
+.horarios {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.horarios .input-box {
+  width: 100%;
+}
+
+.linha-dupla {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.metade {
+  flex: 1;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-primario,
+.btn-secundario {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primario {
+  background-color: #5b2c24;
+  color: #fff;
+}
+
+.btn-primario:hover {
+  background-color: #7c3b2f;
+}
+
+.btn-secundario {
+  background-color: #f5deb3;
+  color: #5b2c24;
+}
+
+.btn-secundario:hover {
+  background-color: #e2c89e;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 25px;
+  }
+
+  .horarios,
+  .linha-dupla {
+    flex-direction: column;
+  }
+}

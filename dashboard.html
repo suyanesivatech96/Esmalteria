@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  
+</head>
+<body>
+
+  <div class="title">
+    <h1>Dashboard</h1>
+    <p>Bem-vindo de volta! Gerencie seus agendamentos</p>
+  </div>
+
+  <main>
+    <div class="caixa-com-link">
+  <button class="btn-secundario" onclick="window.location.href='../agendamento/agendamento.html'">+ Novo Agendamento</button>
+  <button type="button" class="btn-secundario" onclick="window.location.href='../Inicio/inicio.html'">Sair</button>
+</div>
+
+
+      <button type="button" class="btn-secundario" onclick="window.location.href='../calendario/calendario.html'">Calendário</button>
+    </div>
+
+    <div class="cards">
+  <button class="card-btn" onclick="window.location.href='../confirmados/index.php'">
+      Confirmados
+  </button>
+
+  <button class="card-btn" onclick="window.location.href='../proximos/index.php'">
+      Próximos
+  </button>
+
+  <button class="card-btn" onclick="window.location.href='../clientes/index.php'">
+      Total de Clientes
+  </button>
+</div>
+
+
+      
+    </div>
+
+    <div class="agendamentos">
+      <h3>Próximos Agendamentos</h3>
+      <div class="agendamento-item">
+        <h4>Manicure</h4>
+        <p>Ana<br>02 de Outubro de 2025<br>10:30 - 11:40</p>
+        <button class="btn-primario" onclick="confirmarAgendamento(
+  'Manicure',
+  'Ana',
+  '02 de Outubro de 2025',
+  '10:30 - 11:40'
+)">Confirmado</button>
+
+<script>
+function confirmarAgendamento(titulo, cliente, data, horario) {
+
+ 
+  let lista = JSON.parse(localStorage.getItem("confirmados")) || [];
+
+  lista.push({
+    titulo: titulo,
+    cliente: cliente,
+    data: data,
+    horario: horario
+  });
+
+  
+  localStorage.setItem("confirmados", JSON.stringify(lista));
+
+  alert("Agendamento confirmado!");
+
+  
+  location.reload();
+}
+</script>
+
+
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
